@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Advanced Calculator</title>
+
+		<!-- Introducing an Internal CSS element to work on classes created and different elements  -->
+
+		<style type="text/css">
+
+		h1{
+			font-style: italic; font-family: Calibri; text-align: center; color: white; 
+		}
+			/* setting the position , surroundings and how the interface of the calculateor would be seen on a webpage*/
+			form{
+				width: 300px;
+  				height: 450px;
+				margin: auto;
+				border-style: none;
+				border-radius:20px;
+				text-align: center;
+				border-style: inset;
+				margin-top: 80px;
+				padding: 20px;
+
+
+			}
+			/* Setting a background image for the whole webpage with a picture taken from a website*/
+			body{
+				background-image: url(http://wallpapers-and-backgrounds.net/wp-content/uploads/2016/06/grey-abstract-4k-background_1_1024x640.jpg);
+			}
+
+			/* designing how numbers, operators, the display area on the calcualtor Interface will appear on a webpage*/
+			.numbers{
+
+				height: 50px;margin: 10px;width: 50px; font-size: 30px; border-radius:100px;color :#f01b37; border-top: 2px solid #ddd; box-shadow: inset 0px 8px 48px #ddd;
+				font-family: digital-7-regular;
+			}
+			.numbers:hover{
+				background-color: grey;
+			}
+				
+			
+			.operator{
+				height: 50px;margin: 10px;width: 50px;font-size: 30px; border-radius:100px;font-family: digital-7-regular; border-top: 2px solid #ddd; box-shadow: inset 0px 8px 48px #ddd;
+				.operator:hover{
+					background-color:grey;
+				};
+
+			}
+			.disp{
+				height: 70px; width: 290px; font-size: 20px; text-align: right;border-radius: 10px;margin-top: 30px;background-color: #bccd95;
+				font-family: font-family: digital-7-regular;
+
+			}
+			.sym{
+				height: 40px;margin: 10px; width: 200px; font-size: 30px;background-color:#f01b37;box-shadow: 10px solid #ddd
+				inset 0px 8px 48px #ddd;
+			}
+
+		</style>
+	</head>
+	<body>
+
+
+		<H1>GODBLESS' FINAL PROJECT</H1>
+		<!--using input tag rapped with form tag to create the buttons from 9-1 and the operation symbols based on how they are displayed on the interface  and then introducing JavaScript functions which when called will perform specific functions-->
+
+		<form name="calculator" >
+
+			<input type="text" name="display" class="disp" id="display" >
+			<br>
+
+			<br>
+			<input type="button" name="seven" class="numbers" value="7" onclick="calculator.display.value += '7'">
+
+			<input type="button" name="eight" class="numbers" value="8" onclick="calculator.display.value += '8'">
+
+			<input type="button" name="nine" class="numbers" value="9" onclick="calculator.display.value += '9'">
+
+			<input type="button" name="plus" class="operator" value="+" onclick="calculator.display.value += '+'">
+			
+			<br>
+
+			<input type="button" name="four" class="numbers" value="4" onclick="calculator.display.value+='4'">
+
+			<input type="button" name="five" class="numbers" value="5" onclick="calculator.display.value+='5'">
+
+			<input type="button" name="six"  class="numbers" value="6" onclick="calculator.display.value+='6'">
+
+			<input type="button" name="minus" class="operator" value="-" onclick="calculator.display.value+= '-'">
+
+			<br>
+
+			<input type="button" name="one"  class="numbers" value="1" onclick="calculator.display.value +='1'">
+
+			<input type="button" name="two" class="numbers" value="2" onclick="calculator.display.value +='2'">
+
+			<input type="button" name="three" class="numbers" value="3" onclick="calculator.display.value +='3'">
+
+			<input type="button" name="multiplication" class="operator" value="x" onclick="calculator.display.value +='*'">
+
+			<br>
+
+			<input type="button" value=" C " class="numbers" onclick="calculator.display.value = ''">
+
+			<input type="button" name="zero" class="numbers" value="0" onclick="calculator.display.value +='0'">
+			<input type="button" name="decimal" class="numbers" value="." onclick="calculator.display.value+='.'">
+
+			<input type="button" name="division" class="operator" value="/" onclick="calculator.display.value += '/'">
+			<br>
+			
+			<input type="button" name="equalTo" class="sym" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+		
+		</form>
+
+		
+
+	</body>
+</html>
